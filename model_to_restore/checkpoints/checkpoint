@@ -1,0 +1,6 @@
+model_checkpoint_path: "C:\\Users\\Adullam\\workspace\\va-term\\runs\\1496642890\\checkpoints\\model-1700"
+all_model_checkpoint_paths: "C:\\Users\\Adullam\\workspace\\va-term\\runs\\1496642890\\checkpoints\\model-1300"
+all_model_checkpoint_paths: "C:\\Users\\Adullam\\workspace\\va-term\\runs\\1496642890\\checkpoints\\model-1400"
+all_model_checkpoint_paths: "C:\\Users\\Adullam\\workspace\\va-term\\runs\\1496642890\\checkpoints\\model-1500"
+all_model_checkpoint_paths: "C:\\Users\\Adullam\\workspace\\va-term\\runs\\1496642890\\checkpoints\\model-1600"
+all_model_checkpoint_paths: "C:\\Users\\Adullam\\workspace\\va-term\\runs\\1496642890\\checkpoints\\model-1700"

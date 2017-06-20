@@ -1,0 +1,219 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>VA_2017_Term Project</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="apple-touch-icon" href="{{ url_for('static', filename='apple-touch-icon.png') }}">
+
+
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.css') }}">
+        <!-- <link rel="stylesheet" href="css/normalize.min.css"> -->
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+
+        <script src="{{ url_for('static', filename='js/vendor/modernizr-2.8.3.min.js') }}"></script>
+
+
+
+    </head>
+    <body>
+        <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <nav class="navbar navbar-default navbar-fixed-top">
+          <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="/">LIME_v1</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+              <ul class="nav navbar-nav">
+                <li class="active"><a href="/">Text explanation <span class="sr-only">(current)</span></a></li>
+                <li><a href="/image">Image explanation</a></li>
+                <!-- <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Another action</a></li>
+                    <li><a href="#">Something else here</a></li>
+                    <li role="separator" class="divider"></li>
+                    <li><a href="#">Separated link</a></li>
+                    <li role="separator" class="divider"></li>
+                    <li><a href="#">One more separated link</a></li>
+                  </ul>
+                </li> -->
+              </ul>
+              <form class="navbar-form navbar-left">
+                <div class="form-group">
+                  <input type="text" class="form-control" placeholder="Search">
+                </div>
+                <button type="submit" class="btn btn-default">Submit</button>
+              </form>
+              <ul class="nav navbar-nav navbar-right">
+                <li><a href="#">Link</a></li>
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Another action</a></li>
+                    <li><a href="#">Something else here</a></li>
+                    <li role="separator" class="divider"></li>
+                    <li><a href="#">Separated link</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div><!-- /.navbar-collapse -->
+          </div><!-- /.container-fluid -->
+        </nav><!-- /Nav -->
+
+        <div class="container page-content">
+          <div class="row">
+            <div class="jumbotron">
+              <p>2017 AAA638 Term Project</p>
+              <h1>Computational and Visual Analytics </h1>
+
+              <h2>Visualizing classification decision of neural networks </h2>
+              <p><a class="btn btn-primary btn-lg" href="#" role="button">Demo</a></p>
+            </div>
+          </div> <!-- end row -->
+
+
+          <div class="row">
+            <div class="alert alert-success" role="alert">Explanation for sentiment analysis (text)</div>
+          </div><!-- end row-->
+
+          <div class="row">
+
+            <div class="col-sm-4 col-md-4">
+              <ul class="nav nav-pills">
+                <li id="rnn_nav_list" role="presentation" ><a href="/text/rnn">RNN</a></li>
+                <li id="cnn_nav_list" role="presentation" class="active"><a href="/text/cnn">CNN</a></li>
+                <li role="presentation"><a href="#">Others</a></li>
+              </ul>
+
+                <form>
+                  <div class="input-group">
+                   <input id="text_data" type="text" class="form-control" placeholder="Search for..." name="text_data">
+                   <span class="input-group-btn">
+                     <button id="submit_button" class="btn btn-default" type="submit" value="submit">Submit!</button>
+                   </span>
+                 </div><!-- /input-group -->
+                </form>
+            </div><!-- end col-md-6-->
+            <div class="col-sm-8 col-md-8" >
+              <div class="panel panel-default">
+                <div class="panel-body">
+                  <div id="contents_lime">
+                    <iframe class="col-xs-12 col-sm-12 col-md-12" style="height:320px" src="{{ url_for('static', filename='oi_lime/') }}{{ oi_filename }}"></iframe>
+                  </div><!-- end contents_lime -->
+                </div>
+              </div>
+            </div><!-- end col-md-6-->
+          </div><!-- end row-->
+
+
+        </div><!-- end container -->
+
+        <footer class="full-width foot">
+          <div class="container">
+            <div class="row">
+               <div class="col-sm-6 col-md-4 widget">
+                <h3>Team member</h3>
+                  <p>2017020764 김도완</p>
+                  <p>2017010607 김우성</p>
+                  <p>2016010662 윤주성</p>
+              </div><!-- end col-xs-6 col-md-4-->
+              <div class="col-sm-6 col-md-4 widget">
+                <h3>Future work</h3>
+                <p>Deep Taylor Decomposition, </p>
+                  <p>Nonlinear Model of LIME</p>
+
+              </div><!-- end col-xs-6 col-md-4-->
+              <div class="col-sm-6 col-md-4 widget">
+                  <h3>Contact</h3>
+                    <p>Github:</p>
+                    <p>https://github.com/eagle705/Explain_DeepLearning_LIME</p>
+
+            </div><!-- end col-xs-6 col-md-4-->
+            </div> <!-- end row -->
+          </div> <!-- end container-->
+        </footer><!-- end footer -->
+
+
+
+<!-- <p>Hello world! This is HTML5 Boilerplate.</p> -->
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="{{ url_for('static', filename='js/vendor/jquery-1.11.2.min.js') }}"><\/script>')</script>
+
+        <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+        <script src="{{ url_for('static', filename='js/plugins.js') }}"></script>
+        <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <!--<script>-->
+            <!--(function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=-->
+            <!--function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;-->
+            <!--e=o.createElement(i);r=o.getElementsByTagName(i)[0];-->
+            <!--e.src='//www.google-analytics.com/analytics.js';-->
+            <!--r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));-->
+            <!--ga('create','UA-XXXXX-X','auto');ga('send','pageview');-->
+        <!--</script>-->
+        <!---->
+        <!--<script type="text/javascript">-->
+        <!--$(document).ready( function() {-->
+
+          <!--$("#submit_button").click(function() {-->
+            <!--var text_data = $('#text_data').val();-->
+            <!--var state_nav_list = 'rnn';-->
+            <!--if($('#rnn_nav_list').attr('class') == 'active') {-->
+                <!--var state_nav_list = 'rnn';-->
+            <!--}-->
+
+            <!--if($('#cnn_nav_list').attr('class') == 'active') {-->
+                <!--var state_nav_list = 'cnn' ;-->
+            <!--}-->
+
+
+            <!--$.ajax({-->
+            <!--url: '/'+state_nav_list,-->
+            <!--data: JSON.stringify('text_data':text_data, 'state_nav_list':state_nav_list ),-->
+            <!--type: 'POST',-->
+            <!--contentType: 'application/json;charset=UTF-8',-->
+            <!--success: function(response) {-->
+                <!--console.log(response);-->
+            <!--},-->
+            <!--error: function(error) {-->
+                <!--console.log(error);-->
+            <!--}-->
+        <!--});-->
+
+
+          <!--})-->
+
+          <!--$("#rnn_nav_list").click(function() {-->
+               <!--$("#rnn_nav_list").addClass('active')-->
+               <!--$("#cnn_nav_list").removeClass('active')-->
+          <!--})-->
+
+          <!--$("#cnn_nav_list").click(function() {-->
+               <!--$("#cnn_nav_list").addClass('active')-->
+               <!--$("#rnn_nav_list").removeClass('active')-->
+          <!--})-->
+
+
+        <!--});-->
+        <!--</script>-->
+    </body>
+</html>
